@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['annotationchart']}]}"></script>
+        <script type='text/javascript'>
+            google.load('visualization', '1', {'packages':['annotationchart']});
+            google.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('date', 'Date');
+                data.addColumn('number', 'Process 1');
+                data.addColumn('string', 'State');
+                data.addColumn('string', 'Info');
+                data.addColumn('number', 'Process 2');
+                data.addRows([
+                    //[new Date(2314, 2, 16, 12, 30, 45), 90, "Cold", "Member", 20],
+                    [new Date(2015, 04, 30, 20, 58, 15), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 21), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 27), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 32), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 38), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 43), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 49), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 58, 54), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 00), -1, undefined, undefined, 8],
+[new Date(2015, 04, 30, 20, 59, 06), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 11), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 17), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 22), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 28), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 34), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 40), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 45), 57, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 51), 58, undefined, undefined, -1],
+[new Date(2015, 04, 30, 20, 59, 57), 79, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 03), 75, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 08), 83, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 14), 93, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 20), 79, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 25), 95, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 31), 97, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 36), 92, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 42), 95, undefined, undefined, 9],
+[new Date(2015, 04, 30, 21, 00, 48), 87, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 53), 99, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 00, 59), 95, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 04), 85, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 10), 98, undefined, undefined, 6],
+[new Date(2015, 04, 30, 21, 01, 16), 98, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 21), 86, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 27), 96, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 32), 89, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 38), 97, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 44), 100, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 49), 84, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 01, 55), 97, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 00), 98, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 06), 73, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 11), 99, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 17), 74, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 23), 95, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 28), 97, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 34), 97, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 39), 72, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 45), 98, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 02, 51), 85, undefined, undefined, 41],
+[new Date(2015, 04, 30, 21, 02, 56), 48, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 02), 94, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 07), 95, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 13), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 19), 76, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 24), 62, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 30), 60, undefined, undefined, 31],
+[new Date(2015, 04, 30, 21, 03, 36), 61, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 41), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 47), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 52), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 03, 58), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 04), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 09), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 15), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 20), -1, undefined, undefined, 94],
+[new Date(2015, 04, 30, 21, 04, 26), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 31), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 37), 6, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 43), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 48), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 54), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 04, 59), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 05), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 11), -1, undefined, undefined, 39],
+[new Date(2015, 04, 30, 21, 05, 16), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 22), -1, undefined, undefined, 6],
+[new Date(2015, 04, 30, 21, 05, 27), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 33), 9, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 39), 13, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 44), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 05, 50), -1, undefined, undefined, 30],
+[new Date(2015, 04, 30, 21, 05, 55), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 01), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 06), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 12), -1, undefined, undefined, 7],
+[new Date(2015, 04, 30, 21, 06, 18), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 23), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 29), 45, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 34), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 40), -1, undefined, undefined, 86],
+[new Date(2015, 04, 30, 21, 06, 46), 11, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 51), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 06, 57), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 02), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 08), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 14), 19, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 19), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 25), 9, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 30), -1, undefined, undefined, 77],
+[new Date(2015, 04, 30, 21, 07, 36), 46, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 42), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 47), 4, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 53), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 07, 58), 32, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 04), 39, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 09), 58, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 15), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 21), 85, undefined, undefined, 22],
+[new Date(2015, 04, 30, 21, 08, 26), 78, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 32), 50, undefined, undefined, 7],
+[new Date(2015, 04, 30, 21, 08, 37), 7, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 43), 45, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 49), 13, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 08, 54), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 00), -1, undefined, undefined, 45],
+[new Date(2015, 04, 30, 21, 09, 05), -1, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 11), 23, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 17), 15, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 22), -1, undefined, undefined, 6],
+[new Date(2015, 04, 30, 21, 09, 28), 59, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 33), 35, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 39), 9, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 45), 15, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 09, 50), -1, undefined, undefined, 95],
+[new Date(2015, 04, 30, 21, 09, 56), 43, undefined, undefined, -1],
+[new Date(2015, 04, 30, 21, 10, 01), 9, undefined, undefined, -1],
+            ]);
+
+            var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+
+            var options = {
+                displayAnnotations: true,
+                dateFormat: "MMMM dd, yyyy - hh:mm:ss aaa"
+            };
+
+            chart.draw(data, options);
+        }
+
+    </script>
+
+    </head>
+
+    <body>
+        <div id='chart_div' style='width: 1400px; height: 600px;'></div>
+    </body>
+</html>

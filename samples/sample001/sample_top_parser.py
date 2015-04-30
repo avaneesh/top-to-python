@@ -33,14 +33,14 @@ def generate_chart():
 def generate_tsv():
     # 20111001  63.4    62.7    72.2
     row_template = '%s\t%s\t%s'
-    row_header = 'date\tProcess 1\tProcess 2'
+    row_header = 'date\tM9 OS\tHealth Monitor'
     i=0
     row_list=[]
     row_list.append(row_header)
     # Today's date ==>> "2015, 2, 23"
 
     today_str = datetime.date.today().strftime("%Y%m%d")
-    print "Genating chart now.."
+    print "Genating TSV now.."
     for r_a in top_record_list_active:
         # "11:30:20" ==>> "11, 30, 20"
         time_str = ''.join(r_a.timestamp.rsplit(':'))
@@ -55,9 +55,9 @@ def generate_tsv():
  
 
 watch_list=[]
-w1=WatchFor('process_manager_m9', 'Process Manager')
+w1=WatchFor('linux_m9os-imag', 'M9 OS')
 watch_list.append(w1)
-w2=WatchFor('monitor_m9', 'Health Monitor')
+w2=WatchFor('hmonitor', 'Health Monitor')
 watch_list.append(w2)
 
 if __name__ == "__main__":
