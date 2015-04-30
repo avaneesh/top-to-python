@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#
+# Author: Avaneesh Kadam (avaneesh.kadam@gmail.com)
+#
+# Copyright (c) 2012-2014 by Avaneesh Kadam <avaneesh.kadam@gmail.com>
+#
+# You are free to copy/change/distribute this code as long as
+# this copyright notice is kept intact. Yeah?
+#
+
+
+# Record 'top' and output to a file that can be fed to top_to_python package
+# Uses start, end sequence (like '====') for helping out parsing
+
+# Uses top in batch mode - 
+# top -n 1 -b | head -n 15 >> ~/t.out
+
+OUT_FILE=$1
+SLEEP_FOR=5
+
+if [[ $# != 1 ]]; then
+    echo ERROR: Incorrect use. Please provide output file name
+fi
+
+while true;
+do
+    echo >> $OUT_FILE
+    echo ================= `date` ================= >> $OUT_FILE
+    top -n 1 -b | head -n 15 >> $OUT_FILE
+    echo ============================================================================== >> $OUT_FILE
+    sleep $SLEEP_FOR
+done
